@@ -7,8 +7,8 @@ export const metadata = {
 
 export default function Home() {
     return (
-        <main className="p-10">
-            <h1 className="text-4xl font-bold mb-4">Shopping List</h1>
+        <main className="m-8 mx-auto max-w-4xl px-8 text-center">
+            <h1 className="text-5xl font-bold mb-6">Shopping List</h1>
             <ItemList />
         </main>
     );
