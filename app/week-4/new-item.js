@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function NewItem() {
-    const pageStyle = "bg-[#D87280] hover:bg-[#DF1D2D] disabled:bg-[#F4B8BB] w-14 h-8 font-bold text-white text-lg";
+    const pageStyle = "bg-[#D87280] hover:bg-[#Ac5B66] disabled:bg-[#F4B8BB] w-14 h-8 font-bold text-white text-lg";
     const [quantity, setQuantity] = useState(1);
 
     const increment = () => {
