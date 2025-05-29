@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function NewItem() {
-    const pageStyle = "bg-[#D87280] hover:bg-[#DF1D2D] disabled:bg-[#F4B8BB] w-20 p-2 font-bold text-white text-2xl";
+    const pageStyle = "bg-[#D87280] hover:bg-[#DF1D2D] disabled:bg-[#F4B8BB] w-14 h-8 font-bold text-white text-lg";
     const [quantity, setQuantity] = useState(1);
 
     const increment = () => {
@@ -19,21 +19,23 @@ export default function NewItem() {
     }
 
     return (
-        <div className="flex flex-col items-center w-full">
-            <div className="bg-white w-64 p-6 mt-6 mb-3 rounded-2xl text-center font-bold text-4xl">{quantity}</div>
-            <div className="flex items-center gap-4">
-                <button 
-                    onClick={decrement} 
-                    disabled={quantity === 1} 
-                    className={pageStyle + (quantity > 1 ? " cursor-pointer" : "")}>
+        <div className="flex justify-center w-full py-3">
+            <div className="flex flex-row items-center bg-white p-3 w-64 rounded-2xl">
+                <div className="mx-auto text-center bg-white w-1/2 font-bold text-lg">{quantity}</div>
+                <div className="flex justify-center gap-4 mx-3">
+                    <button type="button"
+                        onClick={decrement} 
+                        disabled={quantity === 1} 
+                        className={pageStyle + (quantity > 1 ? " cursor-pointer" : "")}>
                         -
-                </button>
-                <button 
-                    onClick={increment} 
-                    disabled={quantity === 20} 
-                    className={pageStyle + (quantity < 20 ? " cursor-pointer" : "")}>
+                    </button>
+                        <button type="button"
+                        onClick={increment} 
+                        disabled={quantity === 20} 
+                        className={pageStyle + (quantity < 20 ? " cursor-pointer" : "")}>
                         +
-                </button>
+                    </button>
+                </div>
             </div>
         </div>
     );
