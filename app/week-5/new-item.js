@@ -45,7 +45,7 @@ export default function NewItem() {
             {/* Name Field */}
             <input type="text" className="p-3 bg-white w-full rounded-2xl h-14" placeholder="Item Name" value={name} onChange={(event) => setName(event.target.value)} required />
 
-            <div className="flex flex-wrap gap-4 w-full py-3">
+            <div className="flex flex-wrap gap-4 w-full mt-3">
                 {/* Quantity Filed */}
                 <div className="flex flex-1 flex-row items-center bg-white p-3 rounded-2xl">
                     <div className="mx-auto text-center bg-white font-bold text-lg">{quantity}</div>
