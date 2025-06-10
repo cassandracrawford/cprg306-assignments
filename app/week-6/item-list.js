@@ -6,7 +6,7 @@ import items from "./items.json";
 
 export default function ItemList() {
     let sortedItems = items.map(
-        (contact) => ({...contact})
+        (item) => ({...item})
     );
     let buttonStyle="flex-1 bg-[#D87280] px-4 py-2 h-14 text-sm font-bold text-white cursor-pointer hover:bg-[#A80507] rounded-2xl";
     const [sortBy, setSortBy] = useState("name");
@@ -23,7 +23,7 @@ export default function ItemList() {
     } else {
         sortedItems = sortedItems.sort((a,b) => {
             let nameA = a[sortBy].toUpperCase();
-            let nameB = a[sortBy].toUpperCase();
+            let nameB = b[sortBy].toUpperCase();
             if (nameA < nameB) return -1;
             if (nameA > nameB) return 1;
             return 0;
