@@ -5,12 +5,14 @@ import { useState } from "react";
 import items from "./items.json";
 
 export default function ItemList() {
-    let sortedItems;
+    let sortedItems = items.map(
+        (contact) => ({...contact})
+    );
     let buttonStyle="flex-1 bg-[#D87280] px-4 py-2 h-14 text-sm font-bold text-white cursor-pointer hover:bg-[#A80507] rounded-2xl";
     const [sortBy, setSortBy] = useState("name");
 
     if (sortBy === "groupedCategory") {
-        sortedItems = items.reduce((groupCategory, item) => {
+        sortedItems = sortedItems.reduce((groupCategory, item) => {
             const category = item.category
             if (groupCategory[category] == null) {
                 groupCategory[category] = []
@@ -19,9 +21,11 @@ export default function ItemList() {
             return groupCategory;
         }, {});
     } else {
-        sortedItems = items.sort((a,b) => {
-            if (a[sortBy] < b[sortBy]) return -1;
-            if (a[sortBy] > b[sortBy]) return 1;
+        sortedItems = sortedItems.sort((a,b) => {
+            let nameA = a[sortBy].toUpperCase();
+            let nameB = a[sortBy].toUpperCase();
+            if (nameA < nameB) return -1;
+            if (nameA > nameB) return 1;
             return 0;
         });
     }
