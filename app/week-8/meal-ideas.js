@@ -16,17 +16,17 @@ const fetchMealIdeas = async(ingredient) => {
 export default function MealIdeas({ingredient}) {
     const [meals, setMeals]= useState([]);
 
-    const loadMealIdeas = async() => {
-        setMeals(await fetchMealIdeas(ingredient));
-    }
-
     useEffect(() => {
+        const loadMealIdeas = async () => {
+            setMeals(await fetchMealIdeas(ingredient));
+        };
+
         if (ingredient) {
             loadMealIdeas();
         } else {
             setMeals([]);
         }
-        }, [ingredient]);
+    }, [ingredient]);
 
     return(
         <div className="text-white">
