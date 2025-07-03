@@ -21,7 +21,7 @@ export default function Page() {
     return(
         <main className="m-8 mx-auto max-w-5xl px-8 text-center">
             <h1 className="text-5xl font-bold mb-6">Shopping List</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
                 <div className="flex flex-col items-start bg-[#D87280] p-8 text-white w-full max-w-md">
                     <h2 className="text-3xl font-bold">Meal Ideas</h2>
                     {!selectedItemName ? (
