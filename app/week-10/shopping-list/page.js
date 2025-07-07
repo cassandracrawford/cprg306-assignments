@@ -11,9 +11,6 @@ export default function Page() {
     const [ items, setItems ] = useState([]);
     const [ selectedItemName, setSelectedItemName] = useState("");
     const {user} = useUserAuth();
-    console.log("Logged in user:", user);
-    console.log("user.uid:", user?.uid);
-
 
     useEffect(() => {
         const loadItems = async() => {
