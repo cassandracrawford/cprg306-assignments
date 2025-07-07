@@ -11,8 +11,6 @@ export default function Page() {
     const [ items, setItems ] = useState([]);
     const [ selectedItemName, setSelectedItemName] = useState("");
     const {user} = useUserAuth();
-    console.log("Authenticated user:", user.uid);
-
     useEffect(() => {
         const loadItems = async() => {
             if (user?.uid) {
@@ -27,10 +25,15 @@ export default function Page() {
     }, [user]);
     
     const handleAddItem = async(newItem) => {
-        if(!user?.uid) return;
+        if(!user?.uid)
+            {
+                console.log("No user available");
+                return;
+            }
 
         const id = await addItem(user.uid, newItem);
         if(id) {
+            console.log("added item with ID", id);
             setItems((prevItems) => [
                 ...prevItems, {id, ...newItem},
             ]);

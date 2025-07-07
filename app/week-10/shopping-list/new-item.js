@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState} from "react";
 
 export default function NewItem({onAddItem}) {
     const pageStyle = "bg-[#D87280] hover:bg-[#Ac5B66] disabled:bg-[#F4B8BB] w-14 h-8 font-bold text-white text-lg";
@@ -25,10 +25,10 @@ export default function NewItem({onAddItem}) {
 
         // create an item object with current values
         const item = {
-            // id: Array.from({length: 18}, () =>
-            //     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-            //     .charAt(Math.floor(Math.random() * 62))
-            //     ).join(''),
+            id: Array.from({length: 18}, () =>
+                'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+                .charAt(Math.floor(Math.random() * 62))
+                ).join(''),
             name, 
             quantity, 
             category,

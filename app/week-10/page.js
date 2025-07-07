@@ -40,7 +40,7 @@ export default function LandingPage() {
                 <div>
                     <h1 className="text-2xl font-bold mb-6">Welcome, {user.displayName} ({user.email})</h1>
                     <div className="flex flex-col gap-2 justify-center items-center">
-                        <Link href="/week-9/shopping-list" className="text-xl font-bold text-[#A80507] text-decoration-line: underline hover:text-[#D87280]">Go to Shopping List</Link>
+                        <Link href="/week-10/shopping-list" className="text-xl font-bold text-[#A80507] text-decoration-line: underline hover:text-[#D87280]">Go to Shopping List</Link>
                         <button 
                             className="flex-1 bg-[#D87280] px-4 py-2 h-14 text-sm font-bold text-white cursor-pointer hover:bg-[#A80507] rounded-2xl w-xs"
                             onClick={handleLogout}>Logout
