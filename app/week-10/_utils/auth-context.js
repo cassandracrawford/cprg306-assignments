@@ -6,7 +6,6 @@ import {
   signOut,
   onAuthStateChanged,
   GithubAuthProvider,
-  signInWithRedirect,
 } from "firebase/auth";
 import { auth } from "./firebase";
  
@@ -17,7 +16,7 @@ export const AuthContextProvider = ({ children }) => {
  
   const gitHubSignIn = () => {
     const provider = new GithubAuthProvider();
-    return signInWithRedirect(auth, provider);
+    return signInWithPopup(auth, provider);
   };
  
   const firebaseSignOut = () => {
