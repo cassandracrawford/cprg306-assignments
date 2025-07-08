@@ -16,7 +16,7 @@ export const AuthContextProvider = ({ children }) => {
  
   const gitHubSignIn = () => {
     const provider = new GithubAuthProvider();
-    return signInWithPopup(auth, provider);
+    return signInWithRedirect(auth, provider);
   };
  
   const firebaseSignOut = () => {
