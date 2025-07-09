@@ -14,7 +14,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result or visit https://cprg306-assignments-cassandracrawfords-projects.vercel.app/ to view the live site.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result or visit https://cprg306-assignments-jade-five.vercel.app/ to view the live site.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
